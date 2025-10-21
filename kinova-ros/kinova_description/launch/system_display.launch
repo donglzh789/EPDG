@@ -1,0 +1,20 @@
+<launch>
+  <arg name="use_urdf" default="true"/>
+  <arg name="kinova_robotType" default="j2n6s300" />
+  <arg name="kinova_robotName" default="$(arg kinova_robotType)"/>
+	<arg name="kinova_robotSerial" default="not_set" />
+	<arg name="use_jaco_v1_fingers" default="false" />
+	<arg name="feedback_publish_rate" default="0.1" />
+	<arg name="respawn_driver" default="False" />
+  <arg name="rvizconfig" default="$(find kinova_description)/rviz/display.rviz" />
+
+  <!-- 1. 加载机器人模型到参数服务器 -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find kinova_description)/urdf/$(arg kinova_robotType)_standalone.xacro'" />
+  <!-- <param name="robot_description" command="$(find xacro)/xacro '$(find kinova_description)/urdf/output.urdf'" /> -->
+  <node name="$(arg kinova_robotName)_state_publisher"
+          pkg="robot_state_publisher"
+        type="robot_state_publisher">
+  </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true"/>
+</launch>

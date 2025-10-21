@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="assembly">
+  <link
+    name="assembly_base_link">
+    <inertial>
+      <origin
+        xyz="0.024125 6.5129E-06 -1.1295E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.049705" />
+      <inertia
+        ixx="3.9724E-05"
+        ixy="-9.0252E-09"
+        ixz="1.566E-08"
+        iyy="4.0486E-05"
+        iyz="-8.5428E-09"
+        izz="4.0496E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kinova_description/assembly/meshes/final_assembly.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kinova_description/assembly/meshes/final_assembly.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

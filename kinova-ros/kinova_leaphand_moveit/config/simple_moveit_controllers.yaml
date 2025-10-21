@@ -1,0 +1,22 @@
+controller_list:
+  - name: finger1_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - j2n6s300_joint_1
+      - j2n6s300_joint_2
+      - j2n6s300_joint_3
+      - j2n6s300_joint_4
+      - j2n6s300_joint_5
+      - j2n6s300_joint_6
+      - 1
+      - 0
+      - 2
+      - 3
+  - name: fingertip1
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - 3

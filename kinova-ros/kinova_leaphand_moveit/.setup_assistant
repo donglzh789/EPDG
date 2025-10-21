@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kinova_description
+    relative_path: urdf/j2n6s300_standalone.xacro
+    xacro_args: hand:=true
+  SRDF:
+    relative_path: config/j2n6s300.srdf
+  CONFIG:
+    author_name: donglzh
+    author_email: donglzh2024@shanghaitech.edu.cn
+    generated_timestamp: 1744034643
